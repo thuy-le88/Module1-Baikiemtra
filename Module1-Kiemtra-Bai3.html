@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số bất kì có phải là số Fibonacci</title>
+</head>
+<body>
+<script>
+    function isFibonacci() {
+        let n=prompt('Nhập một số bất kì: ');
+        let st1=0;
+        let st2=1;
+        let st3;
+        do {
+            st3=st1+st2;
+            st1=st2;
+            st2=st3;
+        }
+        while (st3<=n);
+        if (st1==n) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+    var res=isFibonacci();
+    document.write(res);
+
+</script>
+</body>
+</html>
